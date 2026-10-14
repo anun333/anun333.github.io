@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anun333: crnumerics and crmvec</title>
+<meta name="description" content="Floating-point results that are the same bits on every machine: crmvec, correctly rounded vector math as a drop-in libmvec; and crnumerics, correctly rounded sums, verified linear algebra, fixed-point functions, the normal distribution and more, each with proofs anyone can rerun.">
+<link rel="canonical" href="https://anun333.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="anun333: crnumerics and crmvec">
+<meta property="og:description" content="Floating-point results that are the same bits on every machine, with proofs anyone can rerun.">
+<meta property="og:url" content="https://anun333.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="anun333: crnumerics and crmvec">
+<meta name="twitter:description" content="Floating-point results that are the same bits on every machine, with proofs anyone can rerun.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "anun333",
+ "url": "https://anun333.github.io/",
+ "description": "Floating-point results that are the same bits on every machine: crmvec and crnumerics.",
+ "hasPart": [
+  {"@type": "SoftwareSourceCode", "name": "crnumerics", "url": "https://anun333.github.io/crnumerics/", "codeRepository": "https://github.com/anun333/crnumerics"},
+  {"@type": "SoftwareSourceCode", "name": "crmvec", "url": "https://anun333.github.io/crmvec/", "codeRepository": "https://github.com/anun333/crmvec"}
+ ],
+ "author": {"@type": "Person", "name": "anun333", "url": "https://github.com/anun333"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root {
+  --bg: #f7f7f4; --panel: #ffffff; --ink: #171a17; --muted: #5d6459; --rule: #dfe2da;
+  --accent: #2f6b45; --code: #eff1ec;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111411; --panel: #181c18; --ink: #e6e9e3; --muted: #a0a99b; --rule: #2c322c;
+          --accent: #7cc795; --code: #1d221d; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--sans); }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+header { padding-block: 3.5rem 1.5rem; }
+.name { font: 600 2.6rem/1.1 var(--mono); letter-spacing: -0.02em; margin: 0; }
+.tag { font-size: 1.3rem; line-height: 1.4; margin: 0.6rem 0 0; text-wrap: balance; }
+main { padding-bottom: 1rem; }
+.proj { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 1.1rem 1.2rem; margin: 1.2rem 0 0; }
+.proj h2 { font: 600 1.25rem var(--mono); margin: 0 0 0.4rem; }
+.proj h2 a { color: var(--accent); text-decoration: none; }
+.proj h2 a:hover, .proj h2 a:focus-visible { text-decoration: underline; outline: none; }
+.proj p { margin: 0 0 0.6rem; }
+.get { font: 0.9rem/1.55 var(--mono); background: var(--code); padding: 0.55rem 0.8rem; border-radius: 4px; overflow-x: auto; margin: 0 0 0.6rem; white-space: pre; }
+.links { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.95rem; }
+.links a { color: var(--accent); }
+footer { color: var(--muted); font-size: 0.88rem; padding-block: 1.6rem 3rem; border-top: 1px solid var(--rule); margin-top: 2rem; }
+footer a { color: var(--accent); }
+@media (max-width: 520px) { .name { font-size: 2.1rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1 class="name">anun333</h1>
+  <p class="tag">Floating-point results that are the same bits on every machine, with proofs anyone can rerun.</p>
+</header>
+<main>
+  <section class="proj">
+    <h2><a href="https://anun333.github.io/crmvec/">crmvec</a></h2>
+    <p>Correctly rounded vector math: a drop-in <code>libmvec.so.1</code> (and SLEEF's libraries on aarch64 and riscv64) whose results are CORE-MATH's, bit for bit, on every machine.</p>
+    <div class="get">conda install -c conda-forge crmvec</div>
+    <div class="links"><a href="https://anun333.github.io/crmvec/">Project page</a><a href="https://github.com/anun333/crmvec">Source</a><a href="https://github.com/anun333/crmvec/releases">Releases</a></div>
+  </section>
+  <section class="proj">
+    <h2><a href="https://anun333.github.io/crnumerics/">crnumerics</a></h2>
+    <p>The libraries beside it: correctly rounded sums and matrix products, neural-network primitives with one answer, the normal distribution, verified linear algebra, correctly rounded fixed-point functions, FP8 and MX math, interval functions, and tools that find machine-dependent results.</p>
+    <div class="get">pip install crival crdistr crlin crfix</div>
+    <div class="links"><a href="https://anun333.github.io/crnumerics/">Project page</a><a href="https://github.com/anun333/crnumerics">Source</a><a href="https://github.com/anun333/crnumerics/releases">Releases</a></div>
+  </section>
+</main>
+<footer>
+  <p>MIT-licensed, built on <a href="https://core-math.gitlabpages.inria.fr/">CORE-MATH</a>'s correctly rounded functions and checked with <a href="https://www.mpfr.org/">MPFR</a>. Written with the assistance of Claude Code (an AI tool); every result comes from running the checks. <a href="https://github.com/anun333">github.com/anun333</a></p>
+</footer>
+</div>
+</body>
+</html>
